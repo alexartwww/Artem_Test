@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Artem_Test>
+			<version>0.1.0</version>
+		</Artem_Test>
+	</modules>
+	<frontend>
+		<routers>
+			<artem>
+				<use>standard</use>
+				<args>
+					<module>Artem_Test</module>
+					<frontName>artem</frontName>
+				</args>
+			</artem>
+		</routers>
+	</frontend>
+	<global>
+		<helpers>
+			<test>
+				<class>Artem_Test_Helper</class>
+			</test>
+		</helpers>
+	</global>
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<test_options>
+											<title>Store Hello World Module Section</title>
+										</test_options>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>
